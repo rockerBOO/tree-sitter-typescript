@@ -510,6 +510,7 @@ module.exports = function defineGrammar(dialect) {
         $._type_identifier,
         $.nested_type_identifier,
         $.generic_type,
+				$.template_literal_type,
         $.type_predicate,
         $.object_type,
         $.array_type,
@@ -530,6 +531,22 @@ module.exports = function defineGrammar(dialect) {
         ),
         $.type_arguments
       ),
+
+			template_literal_type: $ => seq(
+				seq(
+					'`',
+					$.template_literal_type_value,
+					'`'
+				)
+			),
+
+			template_literal_type_value: $ => 
+				choice(
+					$._type_identifier,	
+					$.literal_type,
+					$.nested_type_identifier
+				)
+			,
 
       type_predicate: $ => seq(
         $.identifier,
@@ -606,6 +623,7 @@ module.exports = function defineGrammar(dialect) {
               $.call_signature,
               $.construct_signature,
               $.index_signature,
+
               $.method_signature
             )
           ),

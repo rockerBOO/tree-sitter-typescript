@@ -519,6 +519,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -656,6 +660,10 @@
         },
         {
           "type": "readonly",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -814,6 +822,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "tuple_type",
           "named": true
         },
@@ -902,6 +914,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -1560,6 +1576,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -1675,6 +1695,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -1814,6 +1838,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -2187,6 +2215,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -2607,6 +2639,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -2878,6 +2914,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -3229,6 +3269,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -3667,6 +3711,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -3755,6 +3803,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -4498,6 +4550,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -4968,6 +5024,44 @@
     }
   },
   {
+    "type": "template_literal_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "template_literal_type_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "template_literal_type_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "literal_type",
+          "named": true
+        },
+        {
+          "type": "nested_type_identifier",
+          "named": true
+        },
+        {
+          "type": "type_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "template_string",
     "named": true,
     "fields": {},
@@ -5165,6 +5259,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -5276,6 +5374,10 @@
             "named": true
           },
           {
+            "type": "template_literal_type",
+            "named": true
+          },
+          {
             "type": "this",
             "named": true
           },
@@ -5368,6 +5470,10 @@
           "named": true
         },
         {
+          "type": "template_literal_type",
+          "named": true
+        },
+        {
           "type": "this",
           "named": true
         },
@@ -5456,6 +5562,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -5589,6 +5699,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {
@@ -5749,6 +5863,10 @@
         },
         {
           "type": "predefined_type",
+          "named": true
+        },
+        {
+          "type": "template_literal_type",
           "named": true
         },
         {

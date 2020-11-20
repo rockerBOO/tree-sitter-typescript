@@ -1,6 +1,3 @@
-
-const x = `y`;
-
 type World = "world";
 
 type Greeting = `hello${World}`;
