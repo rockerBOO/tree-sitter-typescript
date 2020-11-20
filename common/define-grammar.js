@@ -557,7 +557,7 @@ module.exports = function defineGrammar(dialect) {
       mapped_type_clause: $ => prec(1, seq(
         $._type_identifier,
         'in',
-        $._type,
+				$._type,
       )),
 
       literal_type: $ => choice(

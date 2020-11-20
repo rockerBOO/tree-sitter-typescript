@@ -791,3 +791,33 @@ type t = readonly (readonly a[]) []
         (array_type
           (readonly)
           (type_identifier))))))
+
+==================================
+Re-map keys in mapped types
+==================================
+
+type MappedTypeWithNewKeys<T> = {
+	[K in keyof T as NewKeyType]: T[K]
+}
+
+type Getters<T> = {
+    [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K]
+};
+
+interface Person {
+    name: string;
+    age: number;
+    location: string;
+}
+
+type LazyPerson = Getters<Person>;
+
+type RemoveKindField<T> = {
+    [K in keyof T as Exclude<K, "name">]: T[K]
+};
+
+---
+(program (type_alias_declaration (type_identifier) (type_parameters (type_parameter (type_identifier))) (object_type (property_signature (computed_property_name (as_expression (identifier) (ERROR (index_type_query (type_identifier))) (type_identifier))) (type_annotation (lookup_type (type_identifier) (type_identifier)))))) (type_alias_declaration (type_identifier) (type_parameters (type_parameter (type_identifier))) (object_type (property_signature (computed_property_name (as_expression (identifier) (ERROR (index_type_query (type_identifier))) (template_string (template_substitution (identifier) (ERROR (type_arguments
+(intersection_type (predefined_type) (type_identifier)))))))) (type_annotation (function_type (formal_parameters) (lookup_type (type_identifier) (type_identifier))))))) (interface_declaration (type_identifier)
+(object_type (property_signature (property_identifier) (type_annotation (predefined_type))) (property_signature (property_identifier) (type_annotation (predefined_type))) (property_signature (property_identifier) (type_annotation (predefined_type))))) (type_alias_declaration (type_identifier) (generic_type (type_identifier) (type_arguments (type_identifier)))) (type_alias_declaration (type_identifier) (type_parameters (type_parameter (type_identifier))) (object_type (index_signature (mapped_type_clause (type_identifier) (index_type_query (generic_type (type_identifier) (ERROR (identifier)) (type_arguments (type_identifier) (literal_type (string)))))) (type_annotation (lookup_type (type_identifier) (type_identifier)))))))
+

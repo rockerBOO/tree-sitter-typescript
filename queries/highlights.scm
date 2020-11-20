@@ -1,34 +1,53 @@
-; Types
+; inherits: javascript
+[
+"abstract"
+"declare"
+"enum"
+"export"
+"implements"
+"interface"
+"keyof"
+"namespace"
+"private"
+"protected"
+"public"
+"type"
+] @keyword
+
+(readonly) @keyword
+
+; types
 
 (type_identifier) @type
 (predefined_type) @type.builtin
 
-((identifier) @type
- (#match? @type "^[A-Z]"))
+; punctuation
 
 (type_arguments
   "<" @punctuation.bracket
   ">" @punctuation.bracket)
 
+(union_type 
+  "|" @punctuation.delimiter)
+
+(intersection_type 
+  "&" @punctuation.delimiter)
+
+(type_annotation
+  ":" @punctuation.delimiter)
+
+(pair
+  ":" @punctuation.delimiter)
+
+(unary_expression) @punctuation.special
+
+(property_signature 
+  "?" @punctuation.special)
+
 ; Variables
 
-(required_parameter (identifier) @variable.parameter)
-(optional_parameter (identifier) @variable.parameter)
+(shorthand_property_identifier) @variable
+(undefined) @variable.builtin
 
-; Keywords
-
-[
-  "abstract"
-  "declare"
-  "enum"
-  "export"
-  "implements"
-  "interface"
-  "keyof"
-  "namespace"
-  "private"
-  "protected"
-  "public"
-  "type"
-  (readonly)
-] @keyword
+(required_parameter (identifier) @parameter)
+(optional_parameter (identifier) @parameter)
